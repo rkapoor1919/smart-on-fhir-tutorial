@@ -17,6 +17,10 @@
 
                 // The scopes that you request from the EHR
                 scope: [
+                    "launch",           // Get the launch context in EHR launch mode
+                    "launch/patient",   // Get the current patient in standalone launch mode
+                    "launch/encounter", // Get the current encounter in standalone launch mode
+                    "openid fhirUser",  // Get the current user
                     "patient/*.read"    // Read patient data
                  ].join(" "),
 
