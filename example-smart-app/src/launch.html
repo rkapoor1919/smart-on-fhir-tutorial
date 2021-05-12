@@ -20,10 +20,11 @@
                     "launch",           // Get the launch context in EHR launch mode
                     "launch/patient",   // Get the current patient in standalone launch mode
                     "launch/encounter", // Get the current encounter in standalone launch mode
-                    "openid fhirUser",  // Get the current user
-                    "patient/*.read"    // Read patient data
+                    "online_access openid profile",  // Get the current user
+					"patient/Observation.read",
+                    "patient/Patient.read"    // Read patient data
                  ].join(" "),
-
+				 
                 iss: "https://launch.smarthealthit.org/v/r4/sim/eyJoIjoiMSJ9/fhir",
 
                 redirectUri: "https://rkapoor1919.github.io/smart-on-fhir-tutorial/example-smart-app/src/index
