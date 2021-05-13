@@ -7,7 +7,7 @@
         <title>Static Template</title>
         <link rel="stylesheet" href="../style.css">
 <script src="https://combinatronics.com/smart-on-fhir/client-js/master/dist/build/fhir-client.js"></script>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
     </head>
     <body>
         <div class="cell top-left">
@@ -31,7 +31,7 @@
                 var app = new App(client);
                 app.renderContext();
                 app.request("metadata");
-				console.log(client);
+				console.log(client)
             }).catch(createRenderer("output"));
         </script>
     </body>
