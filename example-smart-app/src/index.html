@@ -28,6 +28,8 @@
         </div>
         <script type="text/javascript">
             FHIR.oauth2.ready().then(function(client) {
+				console.log(client);
+				console.log("inside+++++");
                 var app = new App(client);
                 app.renderContext();
                 app.request("metadata");
