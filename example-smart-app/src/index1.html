@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Static Template</title>
+        <link rel="stylesheet" href="../style.css">
+<script src="https://combinatronics.com/smart-on-fhir/client-js/master/dist/build/fhir-client.js"></script>
+    <script src="./js/example-smart-app.js"></script>
+    </head>
+    <body>
+
+		 <script type="text/javascript">
+		FHIR.oauth2.ready(client => client.request(`Patient/${client.patient.id}`));
+		</script>
+	    <script type="text/javascript">
+		FHIR.oauth2.ready(client => client.request(client.user.fhirUser));
+		</script>
+        <script type="text/javascript">
+            FHIR.oauth2.ready().then(function(client) {
+                var app = new App(client);
+                app.renderContext();
+                app.request("metadata");
+				console.log(client)
+            }).catch(createRenderer("output"));
+        </script>
+    </body>
+</html>
