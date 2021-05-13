@@ -68,6 +68,7 @@
     }
 
     FHIR.oauth2.ready(onReady, onError);
+	console.log('Loading error--------');
     return ret.promise();
 
   };
