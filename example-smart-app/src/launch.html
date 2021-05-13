@@ -5,7 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Static Template</title>
-   <script src="https://combinatronics.com/smart-on-fhir/client-js/master/dist/build/fhir-client.js"></script>
+    <!-- FHIR Client JS Library -->
+    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+
+    <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
+    <!-- https://github.com/cerner/fhir-client-cerner-additions -->
+    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     </head>
     <body>
         <script>
@@ -13,7 +18,7 @@
 
                 // The client_id that you should have obtained after registering a client at
                 // the EHR.
-                clientId: "87e21541-f9e8-4abf-aa56-60d4887b4ed4",
+                clientId: "a686e36f-2afc-41ed-b494-8871cc19c06e",
 
                 // The scopes that you request from the EHR
                 scope: [
