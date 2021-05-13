@@ -6,18 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Static Template</title>
         <link rel="stylesheet" href="../style.css">
-
+<script src="https://combinatronics.com/smart-on-fhir/client-js/master/dist/build/fhir-client.js"></script>
+    <script src="./js/example-smart-app.js"></script>
     </head>
     <body>
-	
-	<script src="https://combinatronics.com/smart-on-fhir/client-js/master/dist/build/fhir-client.js"></script>
-		<script>
-		FHIR.oauth2.ready()
-			.then(client => client.request("Patient"))
-			.then(console.log)
-			.catch(console.error);
-		</script>
-		
         <div class="cell top-left">
             <h4>Currentjjjjjjj</h4>
             <pre id="client"></pre>
@@ -34,6 +26,16 @@
             <h4>Main Output</h4>
             <pre id="output">Loading...</pre>
         </div>
-
+		 <script type="text/javascript">
+		FHIR.oauth2.ready().then(client => client.api.search({ type: "Patient" }))
+		</script>
+        <script type="text/javascript">
+            FHIR.oauth2.ready().then(function(client) {
+                var app = new App(client);
+                app.renderContext();
+                app.request("metadata");
+				console.log(client)
+            }).catch(createRenderer("output"));
+        </script>
     </body>
 </html>
