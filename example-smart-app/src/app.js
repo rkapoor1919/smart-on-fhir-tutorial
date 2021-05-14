@@ -16,25 +16,25 @@ function App(client) {
 
 App.prototype.fetchCurrentPatient = function() {
   var render = createRenderer("patient");
-  render("Loading.j..");
+  render("Loading...");
   return this.client.patient.read().then(render, render);
 };
 
 App.prototype.fetchCurrentEncounter = function() {
   var render = createRenderer("encounter");
-  render("Loading..n.");
+  render("Loading...");
   return this.client.encounter.read().then(render, render);
 };
 
 App.prototype.fetchCurrentUser = function() {
   var render = createRenderer("user");
-  render("Loading..m.");
+  render("Loading...");
   return this.client.user.read().then(render, render);
 };
 
 App.prototype.request = function(requestOptions, fhirOptions) {
   var render = createRenderer("output");
-  render("Loading...p");
+  render("Loading...");
   return this.client.request(requestOptions, fhirOptions).then(render, render);
 };
 
