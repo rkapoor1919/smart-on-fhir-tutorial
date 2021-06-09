@@ -31,7 +31,7 @@ public class PParser extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out =response.getWriter();
 		out.println("<html><body>");
-		out.println(request.getParameter("patient"));
+		out.println(request.getParameter("firstname")+" "+request.getParameter("lastname"));
 		out.println("</body></html>");
 	}
 
