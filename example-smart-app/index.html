@@ -15,6 +15,10 @@
 <script src="./app.js"></script>
 </head>
 <body>
+	<form action="Parser" method="GET">
+		<pre id="patient"></pre>
+		<br /> <input type="submit" value='Submit' />
+	</form>
 	<div class="cell top-left">
 		<h4>Current Patient</h4>
 		<pre id="patient"></pre>
@@ -39,9 +43,5 @@
             }).catch(createRenderer("output"));
         </script>
 
-	<form action="Parser" method="GET">
-		<pre id="patient"></pre>
-		<br /> <input type="submit" value='Submit' />
-	</form>
 </body>
 </html>
