@@ -3,9 +3,6 @@
 
 function createRenderer(id) {
   const output = id ? document.getElementById(id) : document.body;
-  $.post(PParser.java, {jsonText:jsonText}, function(data) {
-    alert(data);
-});
   return function(data) {
     output.innerText = data && typeof data === "object"
       ? JSON.stringify(data, null, 4)
